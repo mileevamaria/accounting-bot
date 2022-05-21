@@ -13,7 +13,7 @@ class NotionAccountingApi:
         "Content-Type": "application/json",
         "Authorization": f"Bearer {token}"
     }
-    accounting_db_id = 'ef040e4fb96c47f89041c55e22618d19'
+    accounting_db_id = config('ACCOUNTING_DB_ID')
 
     def get_accounting_db(self):
         response = requests.post(
